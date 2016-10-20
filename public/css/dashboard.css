@@ -1,0 +1,14 @@
+.list {
+	width: 50%;
+	margin: 0;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+    height: 100%;
+}
+
+#controlPanelButton {
+	position: right;
+}

@@ -1,5 +1,5 @@
 {
-  "name": "authentication",
+  "name": "claytaylor",
   "version": "1.0.0",
   "description": "MEAN Auth, Jimi Style ;)",
   "main": "server.js",
@@ -14,9 +14,24 @@
     "body-parser": "^1.15.2",
     "client-sessions": "^0.7.0",
     "colors": "^1.1.2",
-    "ejs": "^2.5.1",
+    "ejs": "^2.5.2",
     "express": "^4.14.0",
-    "mongoose": "^4.5.9",
-    "morgan": "^1.7.0"
-  }
+    "logger": "0.0.1",
+    "mongoose": "^4.6.4",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7",
+    "routes": "^2.1.0",
+    "sessions": "0.0.2-7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClaytonTaylor/IstoriaAlpha.git"
+  },
+  "keywords": [
+    "istoriaalpha"
+  ],
+  "bugs": {
+    "url": "https://github.com/ClaytonTaylor/IstoriaAlpha/issues"
+  },
+  "homepage": "https://github.com/ClaytonTaylor/IstoriaAlpha#readme"
 }

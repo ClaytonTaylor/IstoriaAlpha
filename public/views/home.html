@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<!-- ng-app="filmSearchApp" -->
+
+    <head>
+      <title>Istoria</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+
+    <!-- Angular -->
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+
+    <!-- BackEnd JS -->
+
+      <!-- <script src="/scripts/app.module.js"></script>
+      <script src="/scripts/app.controller.users.js"></script>
+      <script src="/scripts/app.factory.api.js"></script> -->
+
+    <!--CSS  -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+      <link rel="stylesheet" href="/public/css/home.css" type="text/css">
+
+    <!-- JQuery -->
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js">
+      </script> -->
+      <!-- <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+      <link href="./css/home.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link href="./css/auth.css" type="text/css" rel="stylesheet"/>
+      <link href="./About/about.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link href="./Control-Panel/control-panel.css" type="text/css" rel="stylesheet"> -->
+      <!-- <link href="./Login/login.css" type="text/css" rel="stylesheet"/> -->
+
+
+    </head>
+
+    <body>
+
+<div class="big-container">
+   <div class="fullscreen-bg">
+        <video poster="../Media/LandingBackground.webmhd.webm" autoplay="" class="fullscreen-bg__video" loop="">
+        <!--<source src="../Media/BlackSandsVik30R.webmhd.webm">-->
+         <source src="../Media/LandingBackground.webmhd.webm"></video>
+    <!-- <footer>
+         <div class="footer-copyright">
+            <div class="container">
+                <p class="white-text">Footage Courtesy of <a class="white-text text-lighten-3" href="http://www.dronebois.com/">DRONEBOIS</a>
+            </div>
+        </div>
+    </footer> -->
+    </div>
+    <div class="no-pad-bot" style="height: 300px;" id="index-banner">
+        <div class="container">
+            <h1 class="header center white-text">You have a Story</h1>
+            <div class="row center">
+                <h5 class="white-text header col s12 light">Let's tell it
+                Together</h5>
+            </div>
+            <!--button to route to search page-->
+            <div class="row center">
+                <!-- <a class="btn-large waves-effect waves-light green modal-trigger"
+                        href="#signUpModal" id="download-button">Get Started</a> -->
+                <a id="LandingButton" class="btn-large waves-effect waves-light green" ui-sref="About" style="right: 20px">Begin</a>
+                <!-- ng-click="signUp()" -->
+                <button class="btn-large waves-effect waves-light blue" ng-click="login()" style="left: 20px;" >Login</button> <!-- ng-click="login()" -->
+            </div>
+        </div>
+
+
+    </div>
+
+
+<!--Sign Up (Begin) Modal -->
+        <!-- <div ng-controller="app.auth.controller as auth">
+                <div class="modal fade bs-example-modal-lg" id="signUpModal">
+                  <div class="modal-content signUpContent">
+                      <form class="userInfo" ng-submit="auth.register.submit($event)">
+                          <h2>Create New Account</h2> -->
+                          <!-- <p> We believe in connecting you with people who will unlock your full potential. Fill out your information as accurately as possible.</p> -->
+                          <!-- <ul> -->
+                        <!-- First Name -->
+                                <!-- <li>
+                                    <input required class="infoFields form-control" type="text" name="firstName" placeholder="Enter First Name" ng-model='auth.payload.firstName' />
+                                </li> -->
+                        <!-- Last Name -->
+                                <!-- <li>
+                                    <input required class="infoFields form-control" type="text" name="lastName" placeholder="Enter Last Name" ng-model='auth.payload.lastName' />
+                                </li> -->
+                        <!-- Email -->
+                                <!-- <li>
+                                    <input required class="infoFields form-control" type="email" name="email" placeholder="Enter E-mail" ng-model="auth.payload.email"/>
+                                </li> -->
+                        <!-- Password -->
+                                <!-- <li>
+                                    <input required class="infoFields form-control" type="password" name="password" placeholder="Enter Password" ng-model='auth.payload.password'/>
+                                </li> -->
+                        <!-- City -->
+                                <!-- <li>
+                                    <input required class="infoFields form-control" type="text" name="city" placeholder="Enter City" ng-model="auth.payload.city"/>
+                                </li>
+                                <li>
+                                    <input required class="infoFields form-control" type="text" name="city" placeholder="Enter State" ng-model="auth.payload.state"/>
+                                </li> -->
+                        <!-- Crew Select -->
+                                    <!-- <select required class="browser-default background white black-text" style="width: 100%; display:flex" ng-model='auth.payload.crew'>
+                                        <option value="" disabled selected>Crew Position</option>
+                                        <option value="Art Director">Art Director</option>
+                                        <option value="Best Boy Lighting">Best Boy Lighting</option>
+                                        <option value="Boom Operator">Boom Operator</option>
+                                        <option value="Camera Operator">Camera Operator</option>
+                                        <option value="Carpenter">Carpenter</option>
+                                        <option value="Casting Director">Casting Director</option>
+                                        <option value="Cinematographer (Director of Photography)">Cinematographer (Director of Photography)</option>
+                                        <option value="Composer">Composer</option>
+                                        <option value="Construction Coordinator">Construction Coordinator</option>
+                                        <option value="Costume Designer">Costume Designer</option>
+                                        <option value="Costume Supervisor">Costume Supervisor</option>
+                                        <option value="Costumer">Costumer</option>
+                                        <option value="Director">Director</option>
+                                        <option value="Dolly Grip">Dolly Grip</option>
+                                        <option value="Film Editor">Film Editor</option>
+                                        <option value="First Assistant Camera (1st A.C.)">First Assistant Camera (1st A.C.)</option>
+                                        <option value="First Assistant Director (1st A.D.)">First Assistant Director (1st A.D.)</option>
+                                        <option value="Gaffer">Gaffer</option>
+                                        <option value="Grip">Grip</option>
+                                        <option value="Hair Stylist">Hair Stylist</option>
+                                        <option value="Head Carpenter">Head Carpenter</option>
+                                        <option value="Illustrator">Illustrator</option>
+                                        <option value="Key Grip">Key Grip</option>
+                                        <option value="Key Makeup Artis">Key Makeup Artist</option>
+                                        <option value="Lead Man">Lead Man</option>
+                                        <option value="Lighting Technician">Lighting Technician</option>
+                                        <option value="Makeup Artist">Makeup Artist</option>
+                                        <option value="Music Supervisor">Music Supervisor</option>
+                                        <option value="Production Designer">Production Designer</option>
+                                        <option value="Second Assistant Camera (2nd A.C.)">Second Assistant Camera (2nd A.C.)</option>
+                                        <option value="Second Assistant Director (2nd A.D.)">Second Assistant Director (2nd A.D.)</option>
+                                        <option value="Set Decorator">Set Decorator</option>
+                                        <option value="Set Designer">Set Designer</option>
+                                        <option value="Set Dresser">Set Dresser</option>
+                                        <option value="Sound Designer">Sound Designer</option>
+                                        <option value="Sound Editor">Sound Editor</option>
+                                        <option value="Sound Mixer">Sound Mixer</option>
+                                        <option value="Special Effects Supervisor">Special Effects Supervisor</option>
+                                        <option value="Stunt Coordinator">Stunt Coordinator</option>
+                                        <option value="Stuntman">Stuntman</option>
+                                        <option value="Visual Effects Producer">Visual Effects Producer</option>
+                                    </select>
+                                </ul> -->
+                          <!-- <input required class="infoFields form-control" data-target="signUpModal" data-toggle="modal"> -->
+
+                          <!-- <button type="submit" class="btn-large waves-effect waves-light green btn-success" data-target="signInModal" data-toggle="modal" ng-click="submitSignIn()">Login</button>
+                         </form>
+                  </div>
+          </div> -->
+<!-- <! Sign Up (Begin) Modal -->
+
+<!-- Login Modal -->
+    <div ng-controller="app.auth.controller as auth">
+        <div class="modal fade bs-example-modal-lg" id="loginModal">
+                  <div class="modal-content loginContent">
+                      <form class="userInfo" ng-submit="auth.login.submit($event)">
+                          <h2>Login</h2>
+                          <ul>
+                            <li>
+
+                            <!-- Email -->
+                                <input required class="infoFields form-control" type="email" name="email" placeholder="Enter e-mail" ng-model="auth.payload.email"/>
+                            </li>
+                            <li>
+
+                            <!-- Password -->
+                                <input required class="infoFields form-control" type="password" name="password" placeholder="Enter Password" ng-model="auth.payload.password"/>
+                            </li>
+                            <p ng-class="auth.login.alert">{{ auth.login.message }}</p>
+                          </ul>
+
+                            <!-- Login Button -->
+                          <button type="submit" class="btn-large waves-effect waves-light green btn-success" data-target="loginModal" data-toggle="modal" ng-click="loginSubmit()">Login</button>
+                          <p ng-class="auth.login.alert">{{ auth.login.message }}</p>
+                         </form>
+                  </div>
+          </div>
+
+          <!-- Login Modal -->
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!--Angular-->
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script> -->
+    <!--JS files-->
+    <!-- <script src="main.js"></script>
+    <script src="./Search/db.js"></script>
+    <script src="./Search/search.js"></script>
+    <script src="/About/about.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/app.controller.users.js"></script>
+    <script src="/js/app.factory.api.js"></script> -->
+
+
+    </body>
+</html>

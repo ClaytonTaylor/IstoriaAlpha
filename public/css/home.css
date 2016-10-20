@@ -1,0 +1,74 @@
+body {
+    background-color: #343642;
+}
+
+.nav-wrapper {
+    background-color: #343642;
+}
+
+nav {
+    background-color: #343642;
+}
+
+.section {
+    background-color: #343642;
+}
+
+.row-container {
+    background-color: #343642;
+   /* width: 100%;*/
+}
+
+
+.fullscreen-bg {
+    position: relative;
+    background-size: 95%;
+    /*height: 56%;*/
+    /*opacity: .1;*/
+    /*height: 0px;*/
+}
+
+.container {
+    /*margin-bottom: 76px;*/
+}
+
+.fullscreen-bg__video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translate(-50%, -50%);
+}
+
+.no-pad-bot {
+    /*background-color: rgba(0,0,0,2);*/
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    height: 200px;
+    padding: 0;
+}
+
+h1 {
+    font-size: 75px;
+    margin-bottom: 0px;
+}
+
+form p {
+    text-align: center;
+    font-size: 18px;
+}
+
+h2 {
+    text-align: center;
+}
+
+/*footer {
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
+}*/
