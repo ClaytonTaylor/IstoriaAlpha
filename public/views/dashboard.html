@@ -7,7 +7,8 @@
     </head>
     <body ng-controller="DashboardController as dashboard" class="container">
         <h1>Welcome to your dashboard!</h1>
-        <p>Email: <%= user.email %></p>
-        <p><a href="/logout" class="btn btn-lg btn-danger">Logout</a></p>
+        <!-- <p>Email: <%= user.email %></p> -->
+        <input required class="infoFields form-control" type="email" name="email" placeholder="Enter E-mail"/>
+        <p><a href="/" class="btn btn-lg btn-danger">Logout</a></p>
     </body>
 </html>

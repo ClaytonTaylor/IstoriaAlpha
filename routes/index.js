@@ -2,7 +2,7 @@ var Auth = require('./auth');
 
 module.exports = (app) => {
     app.get('/', (req,res) => { // if needed, break this out into a controller!
-        res.render('home.html');
+        res.render('landing.html');
     });
 
     app.get('/login', Auth.render);         // login page
